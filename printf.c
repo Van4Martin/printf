@@ -1,5 +1,12 @@
 #include "main.h"
-
+/**
+ * _printf - prints to the stdio
+ * It considers format specifiers 
+ * @format: Input specifiers
+ *
+ * Authors - Martin Dotsey & Godswill Ogbuwa
+ * Return: count
+ */
 int _printf(const char *format, ...)
 {
     va_list arg_v;
