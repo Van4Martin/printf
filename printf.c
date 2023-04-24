@@ -14,25 +14,19 @@ int _printf(const char *format, ...)
 	while ((c =  *(format++)))
 	{
 		if (c == '%')
-	{
-		c = *(format++);
+		{
+			c = *(format++);
 		switch (c)
 		{
 			case 'c':
-				{
-				int  arg =  va_arg(arg_v, int);
-
-				count += _putchar((char)arg);
-				}
+				count += _putchar((char)va_arg(arg_v, int));
 				break;
 			case 's':
 				{
 				char *str = va_arg(arg_v, char*);
 
 				while (*str)
-				{
-					count =+ _putchar(*(str++));
-				}
+					count += _putchar(*(str++));
 				}
 				break;
 			case '%':
@@ -42,8 +36,7 @@ int _printf(const char *format, ...)
 	}
 	else
 	{
-		_putchar(c);
-		count++;
+		count += _putchar(c);
 	}
 	}
 	va_end(arg_v);
