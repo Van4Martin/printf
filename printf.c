@@ -9,7 +9,11 @@ int _printf(const char *format, ...)
 	va_list arg_v;
 	int count = 0;
 	char c;
-
+	
+	if (format == NULL || *format == '\0')
+	{
+		return (0);
+	}
 	va_start(arg_v, format);
 	while ((c =  *(format++)))
 	{
