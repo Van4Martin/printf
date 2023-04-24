@@ -16,28 +16,32 @@ int _printf(const char *format, ...)
 		if (c == '%')
 		{
 			c = *(format++);
-		switch (c)
-		{
-			case 'c':
-				count += _putchar((char)va_arg(arg_v, int));
-				break;
-			case 's':
-				{
-				char *str = va_arg(arg_v, char*);
+			switch (c)
+			{
+				case 'c':
+					count += _putchar((char)va_arg(arg_v, int));
+					break;
+				case 's':
+					{
+					char *str = va_arg(arg_v, char*);
 
-				while (*str)
-					count += _putchar(*(str++));
-				}
-				break;
-			case '%':
-				count += _putchar('%');
-				break;
+					while (*str)
+						count += _putchar(*(str++));
+					}
+					break;
+				case '%':
+					count += _putchar('%');
+					break;
+				default:
+					count += _putchar('%');
+					count += _putchar(c);
+					break;
+			}
 		}
-	}
-	else
-	{
-		count += _putchar(c);
-	}
+		else
+		{
+			count += _putchar(c);
+		}
 	}
 	va_end(arg_v);
 	return (count);
