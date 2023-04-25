@@ -8,6 +8,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int printint(int x);
 
 
 #endif /* Main.h */
