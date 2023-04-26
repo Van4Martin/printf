@@ -19,7 +19,7 @@ int han(const char *format, va_list args)
 			i++;
 			switch (format[i])
 			{
-				case 'c'
+				case 'c':
 					size += _putchar((char)va_arg(args, int));
 					break;
 				case 's':
