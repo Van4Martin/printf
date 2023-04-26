@@ -11,4 +11,5 @@ int _printf(const char *format, ...);
 int printint(int x);
 int _print_string(char *str);
 int han(const char *format, va_list args);
+int _strlen(const char *str);
 #endif /* Main.h */
