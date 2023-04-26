@@ -35,6 +35,9 @@ int _printf(const char *format, ...)
 				case 'i':
 					count += printint(va_arg(arg_v, unsigned int));
 					break;
+				default:
+					count += _putchar(c);
+					break;
 			}
 		}
 		else
