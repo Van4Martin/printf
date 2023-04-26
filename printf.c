@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 					count += printint(va_arg(arg_v, unsigned int));
 					break;
 				default:
+					count += _putchar('%');
 					count += _putchar(c);
 					break;
 			}
