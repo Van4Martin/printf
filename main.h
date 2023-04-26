@@ -12,4 +12,8 @@ int printint(int x);
 int _print_string(char *str);
 int han(const char *format, va_list args);
 int _strlen(const char *str);
+
+int print_int(va_list args);
+int print_char(va_list args);
+int print_string(va_list args);
 #endif /* Main.h */
