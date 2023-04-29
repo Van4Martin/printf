@@ -1,4 +1,4 @@
-#include "main.h"
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c#include "main.h"
 /************************* WRITE HANDLE *************************/
 /**
  * handle_write_char - Prints a string
@@ -16,6 +16,7 @@ int handle_write_char(char c, char buffer[],
 { /* char is stored at left and paddind at buffer's right */
 	int i = 0;
 	char padd = ' ';
+
 	UNUSED(precision);
 	UNUSED(size);
 	if (flags & F_ZERO)
